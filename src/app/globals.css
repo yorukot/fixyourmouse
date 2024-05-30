@@ -2,32 +2,66 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.bg-gruvbox-bg {
+  background-color: #282828;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.bg-gruvbox-gray {
+  background-color: #3c3836;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.bg-gruvbox-red {
+  background-color: #db7c67;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.text-gruvbox-yellow {
+  color: #ebdbb2;
+}
+
+.bg-gruvbox-dark {
+  background-color: #1d2021;
+}
+
+.border-gruvbox-light-gray {
+  border-color: #504945;
+}
+
+.text-gruvbox-blue {
+  color: #46a7bd;
+}
+
+.bg-grid {
+  background-image: linear-gradient(to right, rgba(235, 219, 178, 0.1) 1px, transparent 1px), 
+                    linear-gradient(to bottom, rgba(235, 219, 178, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.no-select {
+  user-select: none;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 5px;
+  background-color: #3c3836;
+  border-radius: 2px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ebdbb2;
+  cursor: pointer;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #ebdbb2;
+  cursor: pointer;
 }
